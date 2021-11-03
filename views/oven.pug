@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
+  - results = [{makeYear: 2020, brand: 'Hamliton Beach', noofModes: 12}, {makeYear: 2018, brand: 'Oster', noofModes: 8},{makeYear: 2016, brand: 'Black Decker', noofModes: 10} ]
+  div(class="container-fluid")
+      each item in results
+        div(class="row")
+          div(class="col-sm-2")  #{item.makeYear}
+          div(class="col-sm-2")  #{item.brand}
+          div(class="col-sm-2")  #{item.noofModes}
   
